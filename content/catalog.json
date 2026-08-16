@@ -1,0 +1,598 @@
+{
+  "categories": [
+    {
+      "id": "hidden",
+      "title": "Скрытые рельсовые системы",
+      "short": "Скрытые",
+      "description": "Все крепежные элементы находятся под рельсом, именно поэтому система именуется скрытой."
+    },
+    {
+      "id": "open",
+      "title": "Открытые системы",
+      "short": "Открытые",
+      "description": "Накладные и потолочные рельсы."
+    },
+    {
+      "id": "cable",
+      "title": "Тросы, крючки и комплектующие",
+      "short": "Тросы и крючки",
+      "description": "Лески и стальные шнуры с наконечником Кобра, крючки для подвески картин и крепёж для монтажа рельса."
+    }
+  ],
+  "products": [
+    {
+      "id": "cliprail",
+      "name": "Скрытый рельс Cliprail",
+      "description": "Данную подвесную систему можно охарактеризовать лучшей в сегменте цена и качество. Все крепежные элементы, находятся под рельсом, именно поэтому система именуется скрытой. Подходит для развески средних не тяжелых картин, максимальная нагрузка 20 кг. на погонный метр.",
+      "load": "20 кг / метр",
+      "category": "hidden",
+      "variants": [
+        {
+          "label": "Белый, 200 см",
+          "price": 520
+        },
+        {
+          "label": "Белый, 300 см",
+          "price": 780
+        },
+        {
+          "label": "Серебряный, 200 см",
+          "price": 520
+        },
+        {
+          "label": "Серебряный, 300 см",
+          "price": 780
+        }
+      ]
+    },
+    {
+      "id": "rail-classic",
+      "name": "Рельс Классик",
+      "load": "25 кг / метр",
+      "category": "open",
+      "variants": [
+        {
+          "label": "Белый, 200 см",
+          "price": 800
+        },
+        {
+          "label": "Серебряный, 200 см",
+          "price": 800
+        },
+        {
+          "label": "Белый, 300 см",
+          "price": 1200
+        },
+        {
+          "label": "Серебряный, 300 см",
+          "price": 1200
+        }
+      ]
+    },
+    {
+      "id": "museum-rod-4x4",
+      "name": "Музейный стержень 4х4 мм, сталь",
+      "description": "Белый/серый, до 100 кг.",
+      "load": "до 100 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "100 см",
+          "price": 560
+        },
+        {
+          "label": "150 см",
+          "price": 660
+        },
+        {
+          "label": "200 см",
+          "price": 740
+        },
+        {
+          "label": "250 см",
+          "price": 900
+        }
+      ]
+    },
+    {
+      "id": "rod-d3",
+      "name": "Стержень d3 мм",
+      "description": "Серый/белый.",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "100 см",
+          "price": 177
+        },
+        {
+          "label": "150 см",
+          "price": 247
+        },
+        {
+          "label": "200 см",
+          "price": 310
+        },
+        {
+          "label": "250 см",
+          "price": 396
+        },
+        {
+          "label": "300 см",
+          "price": 445
+        }
+      ]
+    },
+    {
+      "id": "steel-rod-2mm",
+      "name": "Стальной стержень 2 мм, белый",
+      "load": "15 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "100 см",
+          "price": 99
+        },
+        {
+          "label": "200 см",
+          "price": 149
+        }
+      ]
+    },
+    {
+      "id": "perlon-cobra",
+      "name": "Леска Perlon с наконечником Кобра",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "120 см",
+          "price": 170
+        },
+        {
+          "label": "180 см",
+          "price": 190
+        },
+        {
+          "label": "240 см",
+          "price": 210
+        },
+        {
+          "label": "300 см",
+          "price": 230
+        },
+        {
+          "label": "500 см",
+          "price": 500
+        }
+      ]
+    },
+    {
+      "id": "steel-cobra",
+      "name": "Стальной шнур с наконечником Кобра",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "120 см",
+          "price": 300
+        },
+        {
+          "label": "180 см",
+          "price": 330
+        },
+        {
+          "label": "240 см",
+          "price": 360
+        },
+        {
+          "label": "320 см",
+          "price": 390
+        },
+        {
+          "label": "500 см",
+          "price": 600
+        }
+      ]
+    },
+    {
+      "id": "perlon-loop",
+      "name": "Леска «Perlon» с петлей",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "100 см",
+          "price": 80
+        },
+        {
+          "label": "150 см",
+          "price": 90
+        },
+        {
+          "label": "200 см",
+          "price": 100
+        },
+        {
+          "label": "250 см",
+          "price": 110
+        },
+        {
+          "label": "300 см",
+          "price": 120
+        }
+      ]
+    },
+    {
+      "id": "cable-loop",
+      "name": "Трос с петлей",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "100 см",
+          "price": 200
+        },
+        {
+          "label": "150 см",
+          "price": 220
+        },
+        {
+          "label": "200 см",
+          "price": 240
+        },
+        {
+          "label": "250 см",
+          "price": 260
+        },
+        {
+          "label": "300 см",
+          "price": 280
+        }
+      ]
+    },
+    {
+      "id": "museum-hook-40",
+      "name": "Музейный крючок для стержня 4х4 мм, до 40 кг",
+      "description": "Для подвески картин до 40 кг, для стержня 4х4 мм.",
+      "load": "до 40 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "До 40 кг",
+          "price": 230
+        }
+      ]
+    },
+    {
+      "id": "museum-hook-100",
+      "name": "Музейный крючок для стержня 4х4 мм, до 100 кг",
+      "description": "Для подвески картин до 100 кг, для стержня 4х4 мм.",
+      "load": "до 100 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "До 100 кг",
+          "price": 730
+        }
+      ]
+    },
+    {
+      "id": "museum-hook-100-anti",
+      "name": "Музейный крючок для стержня 4х4 мм, до 100 кг, антивор",
+      "description": "Для подвески картин до 100 кг, для стержня 4х4 мм, антивор.",
+      "load": "до 100 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Антивор",
+          "price": 1043
+        }
+      ]
+    },
+    {
+      "id": "rod-hook-anti",
+      "name": "Крюк для стержней «Анти-вор»",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Антивор",
+          "price": 534
+        }
+      ]
+    },
+    {
+      "id": "spring-hook",
+      "name": "Крючок «Spring» для 3 мм стержня",
+      "description": "Для подвески картин до 15 кг.",
+      "load": "до 15 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Стандартный",
+          "price": 90
+        }
+      ]
+    },
+    {
+      "id": "hook-hr",
+      "name": "Крючок для подвески картин до 15 кг",
+      "load": "до 15 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Белый",
+          "price": 50
+        },
+        {
+          "label": "Серебряный",
+          "price": 50
+        }
+      ]
+    },
+    {
+      "id": "hook-mini",
+      "name": "Крючок Hook мини",
+      "description": "Для подвески картин до 15 кг (на стальном шнуре), подходит только для троса.",
+      "load": "до 15 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Мини",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "hook-anti",
+      "name": "Крючок Hook антивор",
+      "description": "Для подвески картин до 15 кг (на стальном шнуре), подходит только для троса.",
+      "load": "до 15 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Антивор",
+          "price": 320
+        }
+      ]
+    },
+    {
+      "id": "hook",
+      "name": "Крючок Hook",
+      "description": "Для подвески картин до 15 кг (на стальном шнуре), подходит только для троса.",
+      "load": "до 15 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Стандартный",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "id": "ratchet-latch",
+      "name": "Крюк РЭТЧЕТ с защелкой",
+      "description": "Для подвески картин до 15 кг (на стальном шнуре), на леске «Perlon» до 10 кг.",
+      "load": "до 15 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "С защелкой",
+          "price": 359
+        }
+      ]
+    },
+    {
+      "id": "ratchet",
+      "name": "Крючок Рэтчет",
+      "description": "Для подвески картин до 15 кг (на стальном шнуре), на леске «Perlon» до 10 кг.",
+      "load": "до 15 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Стандартный",
+          "price": 260
+        }
+      ]
+    },
+    {
+      "id": "zipper",
+      "name": "Крючок «Zipper»",
+      "description": "Для подвески картин до 15 кг (на стальном шнуре), на леске «Perlon» до 10 кг.",
+      "load": "до 15 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Стандартный",
+          "price": 436
+        }
+      ]
+    },
+    {
+      "id": "smartspring",
+      "name": "Крючок «SmartSpring»",
+      "description": "Для подвески картин весом до 4 кг. Применяется для лески «Perlon».",
+      "load": "до 4 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Стандартный",
+          "price": 75
+        }
+      ]
+    },
+    {
+      "id": "mini-hook",
+      "name": "Крючок «Mini»",
+      "description": "Для подвески картин весом до 4 кг.",
+      "load": "до 4 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Стандартный",
+          "price": 90
+        }
+      ]
+    },
+    {
+      "id": "big-hook",
+      "name": "Крюк большой с винтовым зажимом",
+      "description": "Для лески/тросика.",
+      "load": "7 кг",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Стандартный",
+          "price": 120
+        }
+      ]
+    },
+    {
+      "id": "display-it-fixed",
+      "name": "Фиксированная система Дисплей-ИТ с натяжителем",
+      "description": "Тросовая система Дисплей-ИТ, крепление в стену.",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Стандартный",
+          "price": 1050
+        }
+      ]
+    },
+    {
+      "id": "display-it-moving",
+      "name": "Подвижная система Дисплей-ИТ с натяжителем",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Стандартный",
+          "price": 1050
+        }
+      ]
+    },
+    {
+      "id": "display-it-tensioner",
+      "name": "Натяжитель для Дисплей-ИТ",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Стандартный",
+          "price": 350
+        }
+      ]
+    },
+    {
+      "id": "clamp-single-4",
+      "name": "Зажим одинарный под оргстекло до 4 мм",
+      "description": "Под оргстекло толщиной до 4 мм.",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "До 4 мм",
+          "price": 120
+        }
+      ]
+    },
+    {
+      "id": "clamp-double-4",
+      "name": "Зажим двойной под оргстекло до 4 мм",
+      "description": "Под оргстекло толщиной до 4 мм.",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "До 4 мм",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "clamp-single-6",
+      "name": "Зажим одинарный под оргстекло до 6 мм",
+      "description": "Под оргстекло толщиной до 6 мм.",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "До 6 мм",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "id": "clamp-double-6",
+      "name": "Зажим двойной под оргстекло до 6 мм",
+      "description": "Под оргстекло толщиной до 6 мм.",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "До 6 мм",
+          "price": 190
+        }
+      ]
+    },
+    {
+      "id": "panel-a4",
+      "name": "Планшет из оргстекла А4",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "А4",
+          "price": 400
+        }
+      ]
+    },
+    {
+      "id": "panel-a3",
+      "name": "Планшет из оргстекла А3",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "А3",
+          "price": 1200
+        }
+      ]
+    },
+    {
+      "id": "washer-plastic",
+      "name": "Шайба крепления, пластик",
+      "description": "Применяется для крепления профиля к стене, на 1 метр 3 шт. (в комплекте саморез и дюбель).",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Пластик",
+          "price": 18
+        }
+      ]
+    },
+    {
+      "id": "washer-metal",
+      "name": "Шайба крепления, металл",
+      "description": "Применяется для крепления профиля к стене, на 1 метр 3 шт. (в комплекте саморез и дюбель).",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Металл",
+          "price": 43
+        }
+      ]
+    },
+    {
+      "id": "connector",
+      "name": "Прямой соединитель, металл",
+      "description": "Используется для соединения рельс по прямой.",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Металл",
+          "price": 60
+        }
+      ]
+    },
+    {
+      "id": "cap",
+      "name": "Заглушка торцевая для ClipRail",
+      "description": "Для более эстетичного вида скрытый рельс закрывается пластиковой заглушкой.",
+      "category": "cable",
+      "variants": [
+        {
+          "label": "Пластик",
+          "price": 15
+        }
+      ]
+    }
+  ]
+}

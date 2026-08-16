@@ -1,0 +1,19 @@
+# зависимости и сборка
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# секреты — в репозиторий не попадают никогда
+.env
+.env.local
+.env*.local
+ACCESS.md
+
+# временные файлы
+public/__probe*.html
+*.log
+.DS_Store
+*.tar.gz

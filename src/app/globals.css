@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+/* next-themes ставит класс на <html>, поэтому dark: цепляем к нему,
+   а не к prefers-color-scheme — иначе переключатель не победит систему. */
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   ТОКЕНЫ
+   Светлая тема — база: почти чёрный текст на белом,
+   синий акцент. Тёмная переопределяет только значения.
+   ============================================================ */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 214 42% 12%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 214 42% 12%;
+
+  /* Почти чёрный сине-серый — фон «тёмных» блоков (футер, CTA) */
+  --ink: 225 30% 9%;
+  --ink-soft: 225 24% 15%;
+  --ink-foreground: 220 25% 96%;
+
+  /* Синий акцент #2250F0 */
+  --primary: 227 88% 54%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 214 25% 96%;
+  --secondary-foreground: 214 42% 14%;
+  --muted: 214 24% 96%;
+  --muted-foreground: 214 12% 43%;
+
+  --border: 220 18% 89%;
+  --input: 220 18% 89%;
+  --ring: 227 88% 54%;
+
+  --radius: 0.875rem;
+}
+
+.dark {
+  --background: 225 32% 7%;
+  --foreground: 210 26% 95%;
+
+  --card: 225 26% 10%;
+  --card-foreground: 210 26% 95%;
+
+  --ink: 225 32% 7%;
+  --ink-soft: 225 24% 13%;
+  --ink-foreground: 220 25% 96%;
+
+  /* На тёмном фоне чистый #2250F0 проваливается — поднимаем светлоту. */
+  --primary: 224 92% 66%;
+  --primary-foreground: 225 40% 8%;
+
+  --secondary: 214 30% 14%;
+  --secondary-foreground: 210 26% 95%;
+  --muted: 214 30% 14%;
+  --muted-foreground: 214 14% 63%;
+
+  --border: 222 22% 19%;
+  --input: 222 22% 21%;
+  --ring: 224 92% 66%;
+}
+
+/* ============================================================
+   МОСТ В TAILWIND: токены → утилиты (bg-background, text-primary…)
+   ============================================================ */
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-ink: hsl(var(--ink));
+  --color-ink-soft: hsl(var(--ink-soft));
+  --color-ink-foreground: hsl(var(--ink-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 14px);
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --animate-float: float 16s ease-in-out infinite alternate;
+  --animate-fade-in: fade-in 0.35s ease-out both;
+}
+
+@keyframes float {
+  0%   { transform: translate3d(-4%, -3%, 0) scale(1); opacity: .5; }
+  100% { transform: translate3d(5%, 4%, 0) scale(1.12); opacity: .75; }
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   БАЗА
+   ============================================================ */
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Фикс-шапка ~72px + воздух: якоря не уезжают под неё. */
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* iOS Safari: страница не должна ездить вбок из-за декоративных пятен. */
+    overflow-x: hidden;
+  }
+
+  /* Видимый фокус только с клавиатуры. */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: calc(var(--radius) - 6px);
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.3);
+  }
+
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--muted)); }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 9999px;
+    border: 2px solid hsl(var(--muted));
+  }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.5); }
+
+  /* Уважаем системную настройку: анимации гасим, но контент остаётся. */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      /* Задержку тоже надо снять: иначе элемент с animation-delay и fill-mode
+         both висит невидимым до конца задержки. */
+      animation-delay: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Появление при скролле. По умолчанию элемент видим — состояние «hidden»
+     проставляет только клиентский Reveal, поэтому без JS ничего не пропадает. */
+  .reveal {
+    transition:
+      opacity 0.55s cubic-bezier(0.21, 0.61, 0.35, 1),
+      transform 0.55s cubic-bezier(0.21, 0.61, 0.35, 1);
+  }
+  .reveal[data-reveal="hidden"] {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  .reveal[data-reveal="shown"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Единая ширина контента для всех секций. */
+  .container-x {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 80rem;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 1024px) {
+    .container-x { padding-inline: 2rem; }
+  }
+
+  /* Вертикальный ритм секции — на мобильных плотнее. */
+  .section-y {
+    padding-block: 4.5rem;
+  }
+  @media (min-width: 768px) {
+    .section-y { padding-block: 7rem; }
+  }
+}
